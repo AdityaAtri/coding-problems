@@ -1,9 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//arrays are default passed by pointers 
-//heaps are complete binary tree 
-//in which all the levels are filled (may be except the last one) and every node is far left as possible
+/*
+1. arrays are default passed by pointers 
+2. heaps are complete binary tree in which all the levels are filled (may be except the last one) and every node is far left as possible
+3. this property enables heap to be stored in array 
+4. time complexity - O(nlogn) 
+5. logn for the heapify method 
+   n for extracting n elements from the heap 
+6. priority queue implemented using Heap
+   
+*/
 
 
 void heapify(int arr[], int i, int n){
