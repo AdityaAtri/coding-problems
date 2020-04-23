@@ -2,6 +2,9 @@
 using namespace std;
 
 //arrays are default passed by pointers 
+//heaps are complete binary tree 
+//in which all the levels are filled (may be except the last one) and every node is far left as possible
+
 
 void heapify(int arr[], int i, int n){
 	int left = 2*i+1;
