@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+1. Get Top Priority Element (Get minimum or maximum) - O(1)
+2. Insert an element - O(Logn)
+3. Remove top priority element - O(Logn)
+4. Decrease Key - O(Logn)
+*/
 
 // extract min is followed by minheapify 
 class MinHeap{
