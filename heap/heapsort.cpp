@@ -9,11 +9,20 @@ using namespace std;
 5. logn for the heapify method 
    n for extracting n elements from the heap 
 6. priority queue implemented using Heap
-   
+7. while building max heap, you are calling heapify at every node
+   time taken for the root node at height logn is O(logn)
+   time taken for the inner node at height h is O(h)
+   number of nodes at height h -> n/(2^(h+1))
+
+8.  Priority Queue STL
+	for the max heap  : priority_queue<int>pq;
+	for the min heap  : priority_queue<int,std::vector<int>,std::greater<int>>pq;
+	vector<ListNode*>lists -> it is a vector consists of pointer that points to the datatype ListNode
+
 */
 
 
-void heapify(int arr[], int i, int n){
+void heapify(int arr[], int i, int n){   // ------------> O(logn)
 	int left = 2*i+1;
 	int right = 2*i + 2 ;
 	int largest = i;
@@ -25,8 +34,8 @@ void heapify(int arr[], int i, int n){
 	}
 }
 void heapsort(int arr[], int n){
-	// first make heap 
-	for(int i=n/2-1; i>=0; i--)
+	// building max heap               ----> O(n) (tighter bound) otherwise trivial analysis - O(nlogn)
+ 	for(int i=n/2-1; i>=0; i--)
 		  heapify(arr,i,n); 
     // now extract element one by one and heapify again
 	// arr[0] will contain the maximum value of the heap 
